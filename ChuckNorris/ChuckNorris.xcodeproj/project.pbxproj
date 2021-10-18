@@ -11,8 +11,6 @@
 		95B90B75166F3D29848AE30B /* Pods_ChuckNorris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51F256EBADC84AB06289C8E7 /* Pods_ChuckNorris.framework */; };
 		979BB0C4FE63BD27D963157D /* Pods_ChuckNorris_ChuckNorrisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4587DB87F20A49E3A30DBE5E /* Pods_ChuckNorris_ChuckNorrisUITests.framework */; };
 		AC5C44CC271D5545008A9229 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C44CB271D5545008A9229 /* AppDelegate.swift */; };
-		AC5C44D0271D5545008A9229 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C44CF271D5545008A9229 /* ViewController.swift */; };
-		AC5C44D3271D5545008A9229 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5C44D1271D5545008A9229 /* Main.storyboard */; };
 		AC5C44D5271D5547008A9229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC5C44D4271D5547008A9229 /* Assets.xcassets */; };
 		AC5C44D8271D5547008A9229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5C44D6271D5547008A9229 /* LaunchScreen.storyboard */; };
 		AC5C44E3271D5547008A9229 /* ChuckNorrisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C44E2271D5547008A9229 /* ChuckNorrisTests.swift */; };
@@ -22,6 +20,13 @@
 		AC89653B271D5A0500BD7DB3 /* ChuckNorrisManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89653A271D5A0500BD7DB3 /* ChuckNorrisManager.swift */; };
 		AC89653D271D5C7C00BD7DB3 /* ChuckNorrisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89653C271D5C7C00BD7DB3 /* ChuckNorrisModel.swift */; };
 		AC896541271D60DC00BD7DB3 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC896540271D60DC00BD7DB3 /* UIImageView+Extension.swift */; };
+		AC896544271D615400BD7DB3 /* CategoriesListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC896543271D615400BD7DB3 /* CategoriesListBuilder.swift */; };
+		AC896546271D615C00BD7DB3 /* CategoriesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC896545271D615C00BD7DB3 /* CategoriesListInteractor.swift */; };
+		AC896548271D616500BD7DB3 /* CategoriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC896547271D616500BD7DB3 /* CategoriesListPresenter.swift */; };
+		AC89654A271D616C00BD7DB3 /* CategoriesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC896549271D616C00BD7DB3 /* CategoriesListRouter.swift */; };
+		AC89654C271D617900BD7DB3 /* CategoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89654B271D617900BD7DB3 /* CategoriesListViewController.swift */; };
+		AC89654E271D618100BD7DB3 /* CategoriesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC89654D271D618100BD7DB3 /* CategoriesList.storyboard */; };
+		AC896551271D62C400BD7DB3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC896550271D62C400BD7DB3 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +55,6 @@
 		6D7FA2A4BBF7CFAEABD48288 /* Pods-ChuckNorrisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisTests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisTests/Pods-ChuckNorrisTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC5C44C8271D5545008A9229 /* ChuckNorris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5C44CB271D5545008A9229 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC5C44CF271D5545008A9229 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC5C44D2271D5545008A9229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC5C44D4271D5547008A9229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC5C44D7271D5547008A9229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC5C44D9271D5547008A9229 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +67,13 @@
 		AC89653A271D5A0500BD7DB3 /* ChuckNorrisManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisManager.swift; sourceTree = "<group>"; };
 		AC89653C271D5C7C00BD7DB3 /* ChuckNorrisModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisModel.swift; sourceTree = "<group>"; };
 		AC896540271D60DC00BD7DB3 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		AC896543271D615400BD7DB3 /* CategoriesListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListBuilder.swift; sourceTree = "<group>"; };
+		AC896545271D615C00BD7DB3 /* CategoriesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListInteractor.swift; sourceTree = "<group>"; };
+		AC896547271D616500BD7DB3 /* CategoriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListPresenter.swift; sourceTree = "<group>"; };
+		AC896549271D616C00BD7DB3 /* CategoriesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListRouter.swift; sourceTree = "<group>"; };
+		AC89654B271D617900BD7DB3 /* CategoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListViewController.swift; sourceTree = "<group>"; };
+		AC89654D271D618100BD7DB3 /* CategoriesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoriesList.storyboard; sourceTree = "<group>"; };
+		AC896550271D62C400BD7DB3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C241DA8090B1F1B05E6D9A77 /* Pods-ChuckNorris-ChuckNorrisUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorris-ChuckNorrisUITests.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorris-ChuckNorrisUITests/Pods-ChuckNorris-ChuckNorrisUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3B1DA1B5AE3556F2C05077D /* Pods-ChuckNorris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorris.debug.xcconfig"; path = "Target Support Files/Pods-ChuckNorris/Pods-ChuckNorris.debug.xcconfig"; sourceTree = "<group>"; };
 		F4DC9D2698CFE2889D7F341F /* Pods-ChuckNorrisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChuckNorrisTests.release.xcconfig"; path = "Target Support Files/Pods-ChuckNorrisTests/Pods-ChuckNorrisTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,12 +145,11 @@
 		AC5C44CA271D5545008A9229 /* ChuckNorris */ = {
 			isa = PBXGroup;
 			children = (
+				AC89654F271D62BC00BD7DB3 /* Common */,
 				AC896535271D58E500BD7DB3 /* Network */,
 				AC89653F271D60CA00BD7DB3 /* Extension */,
+				AC896542271D613D00BD7DB3 /* Modules */,
 				AC5C44CB271D5545008A9229 /* AppDelegate.swift */,
-				AC5C44CF271D5545008A9229 /* ViewController.swift */,
-				AC5C44D1271D5545008A9229 /* Main.storyboard */,
-				AC5C44D6271D5547008A9229 /* LaunchScreen.storyboard */,
 				AC5C44D4271D5547008A9229 /* Assets.xcassets */,
 				AC5C44D9271D5547008A9229 /* Info.plist */,
 			);
@@ -180,6 +189,44 @@
 				AC896540271D60DC00BD7DB3 /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		AC896542271D613D00BD7DB3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				AC896553271D644F00BD7DB3 /* Launch */,
+				AC896552271D644200BD7DB3 /* Categories */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		AC89654F271D62BC00BD7DB3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AC896550271D62C400BD7DB3 /* Router.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		AC896552271D644200BD7DB3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AC896543271D615400BD7DB3 /* CategoriesListBuilder.swift */,
+				AC896545271D615C00BD7DB3 /* CategoriesListInteractor.swift */,
+				AC896547271D616500BD7DB3 /* CategoriesListPresenter.swift */,
+				AC896549271D616C00BD7DB3 /* CategoriesListRouter.swift */,
+				AC89654B271D617900BD7DB3 /* CategoriesListViewController.swift */,
+				AC89654D271D618100BD7DB3 /* CategoriesList.storyboard */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		AC896553271D644F00BD7DB3 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C44D6271D5547008A9229 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		D5F504C0EC17CA99D425EEF7 /* Frameworks */ = {
@@ -303,7 +350,7 @@
 			files = (
 				AC5C44D8271D5547008A9229 /* LaunchScreen.storyboard in Resources */,
 				AC5C44D5271D5547008A9229 /* Assets.xcassets in Resources */,
-				AC5C44D3271D5545008A9229 /* Main.storyboard in Resources */,
+				AC89654E271D618100BD7DB3 /* CategoriesList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,8 +481,13 @@
 				AC896541271D60DC00BD7DB3 /* UIImageView+Extension.swift in Sources */,
 				AC896538271D590500BD7DB3 /* ChuckNorrisApi.swift in Sources */,
 				AC89653B271D5A0500BD7DB3 /* ChuckNorrisManager.swift in Sources */,
-				AC5C44D0271D5545008A9229 /* ViewController.swift in Sources */,
+				AC896548271D616500BD7DB3 /* CategoriesListPresenter.swift in Sources */,
+				AC896551271D62C400BD7DB3 /* Router.swift in Sources */,
+				AC896544271D615400BD7DB3 /* CategoriesListBuilder.swift in Sources */,
+				AC89654C271D617900BD7DB3 /* CategoriesListViewController.swift in Sources */,
+				AC89654A271D616C00BD7DB3 /* CategoriesListRouter.swift in Sources */,
 				AC89653D271D5C7C00BD7DB3 /* ChuckNorrisModel.swift in Sources */,
+				AC896546271D615C00BD7DB3 /* CategoriesListInteractor.swift in Sources */,
 				AC5C44CC271D5545008A9229 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,14 +525,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC5C44D1271D5545008A9229 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AC5C44D2271D5545008A9229 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AC5C44D6271D5547008A9229 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -620,7 +664,7 @@
 				INFOPLIST_FILE = ChuckNorris/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CategoriesList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -650,7 +694,7 @@
 				INFOPLIST_FILE = ChuckNorris/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = CategoriesList;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
