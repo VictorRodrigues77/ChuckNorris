@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 final class CategoriesListViewController: UIViewController {
     
@@ -47,7 +48,7 @@ extension CategoriesListViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoriesListCell", for: indexPath)
-        cell.textLabel?.text = presenter?.category(at: indexPath.row)
+        cell.textLabel?.text = presenter?.category(at: indexPath.row)?.capitalizingFirstLetter()
         return cell
     }
     
@@ -57,6 +58,16 @@ extension CategoriesListViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 extension CategoriesListViewController: CategoriesListPresenterOutput {
+    func showProgress() {
+        MBProgressHUD
+            .showAdded(to: self.view, animated: true)
+    }
+    
+    func hideProgress() {
+        MBProgressHUD
+            .hide(for: self.view, animated: true)
+    }
+    
     func onFetchCategories() {
         self.categoriesListTableView.isHidden = false
         self.categoriesListTableView.reloadData()

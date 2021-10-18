@@ -8,10 +8,8 @@
 import Moya
 
 public enum ChuckNorrisApi {
-    case random
     case categories
     case category(term: String)
-    case search(term: String)
 }
 
 extension ChuckNorrisApi: TargetType {
@@ -22,14 +20,10 @@ extension ChuckNorrisApi: TargetType {
     
     public var path: String {
         switch self {
-        case .random:
-            return "/random"
         case .categories:
             return "/categories"
         case .category:
             return "/random"
-        case .search:
-            return "/search"
         }
     }
     
@@ -39,12 +33,10 @@ extension ChuckNorrisApi: TargetType {
     
     public var task: Task {
         switch self {
-        case .random, .categories:
+        case .categories:
             return .requestPlain
         case .category(let term):
             return .requestParameters(parameters: ["category": term], encoding: URLEncoding.queryString)
-        case .search(let term):
-            return .requestParameters(parameters: ["query": term], encoding: URLEncoding.queryString)
         }
     }
     

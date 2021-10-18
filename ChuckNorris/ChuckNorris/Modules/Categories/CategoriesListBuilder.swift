@@ -17,7 +17,9 @@ final class CategoriesListBuilder: CategoriesListBuildable {
             network: ChuckNorrisManager()
         )
         
-        let router = CategoriesListRouter()
+        let router = CategoriesListRouter(
+            builder: JokeBuilder()
+        )
         
         let presenter = CategoriesListPresenter(
             interactor: interactor,

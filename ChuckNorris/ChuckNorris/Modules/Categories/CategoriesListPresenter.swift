@@ -15,6 +15,8 @@ protocol CategoriesListPresenterInput: AnyObject {
 }
 
 protocol CategoriesListPresenterOutput: AnyObject {
+    func showProgress()
+    func hideProgress()
     func onFetchCategories()
     func onFetchCategories(error: String)
 }
@@ -48,7 +50,8 @@ final class CategoriesListPresenter: CategoriesListPresenterInput {
     }
     
     func selectCategory(at index: Int) {
-        print("selectCategory: \(String(describing: categories?[index]))")
+        guard let categories = categories else { return }
+        router.showJoke(term: categories[index])
     }
     
     func loadCategories() {
@@ -59,8 +62,12 @@ final class CategoriesListPresenter: CategoriesListPresenterInput {
 
 extension CategoriesListPresenter: CategoriesListInteractorOutput {
     func onFetchCategories(categories: [String]) {
-        self.categories = categories
-        self.output?.onFetchCategories()
+        self.output?.showProgress()
+        DispatchQueue.main.async {
+            self.output?.hideProgress()
+            self.categories = categories
+            self.output?.onFetchCategories()
+        }
     }
     
     func onFetchCategories(error: Error) {
